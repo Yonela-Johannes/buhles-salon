@@ -161,10 +161,7 @@ describe("The Booking Salon", function () {
         const client1 = await booking.findClient("18");
         const client2 = await booking.findClient("19");
         const stylist = await booking.findStylist("28")
-        const treatment1 = await booking.findTreatment("5");
-
-
-        
+        const treatment1 = await booking.findTreatment("5");      
         await booking.makeBooking(treatment1.id, client1.id, stylist.id , "03/02/2021", '01:00:04');
         await booking.makeBooking(treatment1.id, client2.id, stylist.id , "3/02/2021", '01:00:04');
         const [clientBooking] = await booking.findIncomeDate("03/02/2021");
