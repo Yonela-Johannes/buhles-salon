@@ -1,0 +1,1 @@
+create database buhle_salon;
