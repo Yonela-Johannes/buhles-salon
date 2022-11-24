@@ -172,10 +172,6 @@ describe("The Booking Salon", function () {
         assert.deepEqual(result, clientBooking);
     })
 
-    it("should be able to find the most valuable client", async function() {
-        const commission = await booking.findCommission("28");
-    })
-
     after(function () {
         db.$pool.end()
     });
